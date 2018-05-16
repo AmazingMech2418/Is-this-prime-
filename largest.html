@@ -1,0 +1,20 @@
+<script>
+function isPrime(arg) {
+var a = 1;
+while (a<Math.sqrt(arg)) {
+a++;
+if (arg%a === 0) {
+return false;
+}
+}
+return true;
+} 
+var largest = 2
+setInterval(function(){
+if(isPrime(Math.pow(2,largest)-1)) {
+largest = Math.pow(2,largest)-1;
+document.getElementsByTagName("p")[0].innerHTML=largest.toString();
+}
+},10);
+</script>
+<p></p>
